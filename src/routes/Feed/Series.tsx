@@ -7,11 +7,11 @@ import { DEFAULT_CATEGORY } from "src/constants"
 
 type Props = {}
 
-const CategoryList: React.FC<Props> = () => {
+const Series: React.FC<Props> = () => {
   const router = useRouter()
   const data = useCategoriesQuery()
 
-  const currentCategory = `${router.query.category || ``}` || DEFAULT_CATEGORY
+  const currentSeries = `${router.query.category || ``}` || DEFAULT_CATEGORY
 
   const handleOptionClick = (category: string) => {
     router.push({
@@ -24,16 +24,18 @@ const CategoryList: React.FC<Props> = () => {
   return (
     <StyledWrapper>
       <div className="top">
-        <Emoji>🗂️</Emoji> Categories
+        <Emoji>🗂️</Emoji> Series
       </div>
       <div className="list">
         {Object.keys(data).map((key, idx) => (
           <a
-            data-active={key === currentCategory}
+            data-active={key === currentSeries}
             key={idx}
             onClick={() => handleOptionClick(key)}
           >
-            {`${key} (${data[key]})`}
+            {/* 이모티콘 제거 후 시리즈 명 출력 */}
+            {/^[A-Za-z가-힣]/.test(key[0]) ? key : key.slice(3)}
+            {` (${data[key]})`}
           </a>
         ))}
       </div>
@@ -41,7 +43,7 @@ const CategoryList: React.FC<Props> = () => {
   )
 }
 
-export default CategoryList
+export default Series
 
 const StyledWrapper = styled.div`
   .top {
