@@ -2,7 +2,7 @@ const CONFIG = {
   // profile setting (required)
   profile: {
     name: "Kim JangHo",
-    image: "/avatar.svg",
+    image: "/avatar.jpg",
     role: "frontend developer",
     bio: "I develop everything.",
     email: "rlawkdgh0406@naver.com",
