@@ -5,6 +5,7 @@ import {
   AiOutlineGithub,
   AiOutlineMail,
   AiFillLinkedin,
+  AiFillPhone,
 } from "react-icons/ai"
 import styled from "@emotion/styled"
 
@@ -13,6 +14,19 @@ const ContactCard: React.FC = () => {
     <>
       <StyledTitle>💬 Contact</StyledTitle>
       <StyledWrapper>
+        {CONFIG.profile.phone && (
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault()
+            }}
+            rel="noreferrer"
+            target="_blank"
+          >
+            <AiFillPhone className="icon" />
+            <div className="name">{CONFIG.profile.phone}</div>
+          </a>
+        )}
         {CONFIG.profile.github && (
           <a
             href={`https://github.com/${CONFIG.profile.github}`}
