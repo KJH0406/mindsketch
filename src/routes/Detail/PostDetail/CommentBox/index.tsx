@@ -33,7 +33,7 @@ const CommentBox: React.FC<Props> = ({ data }) => {
         <CusdisComponent id={data.id} slug={data.slug} title={data.title} />
       )} */}
 
-      <DisqusComponent id={data.slug} title={data.title} />
+      <DisqusComponent id={data.id} slug={data.slug} title={data.title} />
     </div>
   )
 }
