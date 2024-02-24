@@ -14,6 +14,12 @@ const CusdisComponent = dynamic(
   },
   { ssr: false }
 )
+const DisqusComponent = dynamic(
+  () => {
+    return import("./Disqus")
+  },
+  { ssr: false }
+)
 
 type Props = {
   data: TPost
@@ -22,10 +28,12 @@ type Props = {
 const CommentBox: React.FC<Props> = ({ data }) => {
   return (
     <div>
-      {CONFIG.utterances.enable && <UtterancesComponent issueTerm={data.id} />}
+      {/* {CONFIG.utterances.enable && <UtterancesComponent issueTerm={data.id} />}
       {CONFIG.cusdis.enable && (
         <CusdisComponent id={data.id} slug={data.slug} title={data.title} />
-      )}
+      )} */}
+
+      <DisqusComponent id={data.slug} title={data.title} />
     </div>
   )
 }
