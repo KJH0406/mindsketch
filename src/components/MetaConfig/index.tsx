@@ -16,10 +16,7 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
       <title>{props.title}</title>
       <meta name="robots" content="follow, index" />
       <meta charSet="UTF-8" />
-      <meta
-        name="description"
-        content="'마인드 스케치, 일상 속 영감과 배움을 통한 생각을 그리다' 일상의 순간들과 개인적 학습 과정에서 발견한 영감들을 기록하고 공유하는 데 중점을 둔 곳입니다."
-      />
+      <meta name="description" content={props.description} />
       {/* og */}
       <meta property="og:type" content={props.type} />
       <meta property="og:title" content={props.title} />
