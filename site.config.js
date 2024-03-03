@@ -4,12 +4,13 @@ const CONFIG = {
     name: "Kim JangHo",
     image: "/avatar.jpg",
     role: "frontend developer",
-    bio: "I develop everything.",
+    bio: "Always growing🔥.",
     email: "rlawkdgh0406@naver.com",
-    linkedin: "",
+    linkedin: "kimjangho",
     github: "KJH0406",
     instagram: "_djangho",
-    phone: "+82 10-2108-4146",
+    phone: "",
+    // phone: "+82 10-2108-4146",
   },
   projects: [
     {
