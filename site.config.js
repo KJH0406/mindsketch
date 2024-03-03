@@ -4,7 +4,7 @@ const CONFIG = {
     name: "Kim JangHo",
     image: "/avatar.jpg",
     role: "frontend developer",
-    bio: "Always growing🔥.",
+    bio: "Always growing🔥",
     email: "rlawkdgh0406@naver.com",
     linkedin: "kimjangho",
     github: "KJH0406",
