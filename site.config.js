@@ -14,8 +14,8 @@ const CONFIG = {
   },
   projects: [
     {
-      name: `mindsketch`,
-      href: "https://github.com/KJH0406/mindsketch",
+      name: ``,
+      href: "",
     },
   ],
   // blog setting (required)
