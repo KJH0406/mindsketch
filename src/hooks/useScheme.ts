@@ -27,7 +27,7 @@ const useScheme = (): [Scheme, SetScheme] => {
     if (!window) return
 
     const scheme = getCookie("scheme")
-    setScheme(scheme === "light" ? "light" : "dark")
+    setScheme(scheme === "light" ? "light" : "light") // 초기 라이트 모드로 설정 고정
   }, [])
 
   return [scheme, setScheme]
