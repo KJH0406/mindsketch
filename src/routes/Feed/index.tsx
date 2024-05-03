@@ -31,8 +31,12 @@ const Feed: React.FC<Props> = () => {
         <TagList />
       </div>
       <div className="mid">
-        <MobileProfileCard />
-        <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
+        <div className="mobile-profile-card">
+          <MobileProfileCard />
+        </div>
+        <div className="search-input">
+          <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
+        </div>
         <div className="tags">
           <TagList />
         </div>
@@ -104,11 +108,30 @@ const StyledWrapper = styled.div`
       @media (min-width: 1024px) {
         display: none;
       }
+
+      // 모바일에서 태그 비활성화
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
 
     > .footer {
       padding-bottom: 2rem;
       @media (min-width: 1024px) {
+        display: none;
+      }
+    }
+
+    // 모바일에서 프로필 카드 비활성화
+    .mobile-profile-card {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    // 모바일에서 검색 비활성화
+    .search-input {
+      @media (max-width: 768px) {
         display: none;
       }
     }
