@@ -3,8 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://mindsketch.vercel.app
 Host: https://www.mindsketch365.com
 
 # Sitemaps
-Sitemap: https://mindsketch.vercel.app/sitemap.xml
+Sitemap: https://mindsketch365.com/sitemap.xml
